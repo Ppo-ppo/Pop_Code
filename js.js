@@ -1,10 +1,10 @@
-// let loader=document.querySelector('.rond');
-//             let logo=document.querySelector('.logo');
-//             setTimeout(remplacertruc, 3000);
-//             function remplacertruc(){
-//                 loader.style.display="none"
-//                 logo.style.display="block"
-//             }
+//  let loader=document.querySelector('.rond');
+//              let logo=document.querySelector('.logo');
+//              setTimeout(remplacertruc, 10000);
+//              function remplacertruc(){
+//                  loader.style.display="none"
+//                  logo.style.display="block"
+//              }
 let toto ='...'
 function typingText(text, speed) {
     var i = 0;
@@ -18,4 +18,6 @@ function typingText(text, speed) {
         }
     }, speed);
 }
-typingText(toto,800)
+typingText(toto,800);
+
+

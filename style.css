@@ -2,7 +2,75 @@ body{
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #212121;
+    background-image : url("fondBrique.png") ;
+    background-size: cover;
+}
+.boite{
+    position: relative;
+}
+.orbe1{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: rgb(41,154,241);
+    background: radial-gradient(circle, rgba(41, 154, 241, 0.314) 17%, rgba(42, 10, 93, 0) 63%);
+    left: 10px;
+    top: 10px;
+    animation-duration: 5.5s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+.orbe2{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background:#ec48db86 ;
+    background: radial-gradient(circle, #ec48db63 17%, rgba(42, 10, 93, 0) 63%);
+    right: 1px;
+    top:300px;
+    animation-duration: 4.0s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+.orbe3{
+    position:absolute;
+    height: 200Px;
+    width: 200px;
+    top:312px;
+    left: 300px;
+    background: rgba(255, 255, 255, 0.754);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.155) 17%, rgba(42, 10, 93, 0) 63%);
+    animation-duration: 6.0s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+.orbe4{
+    position:absolute;
+    height: 400Px;
+    width: 400px;
+    right: 350px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(41, 154, 241, 0.314) 17%, rgba(42, 10, 93, 0) 63%);
+    animation-duration: 3.5s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+.orbe5{
+    position:absolute;
+    height: 100Px;
+    width: 100px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, #ec48db63 17%, rgba(42, 10, 93, 0) 63%);
+    top: 300px;
+    left: 200px;
+    animation-duration: 7.0s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
 }
 .container{
     height: 100vh;
@@ -16,10 +84,12 @@ body{
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    background-color: #212121;
-    border:#e302c5 solid 5px;
+    background-color: #2a0a5d;
+    border:#ec48db solid 5px;
     position: relative;
-    filter: drop-shadow(0 0 20px #e302c5) drop-shadow(0 0 60px #e302c5);
+    filter: drop-shadow(0 0 20px #ec48db) drop-shadow(0 0 60px #ec48db);
+    animation: flashing 1.4s infinite alternate;
+    
 }
 .container2{
     width: 100%;
@@ -32,16 +102,17 @@ body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #212121;
+    background-color: #2a0a5d;
     z-index: 2;
     
 
 }
+
 .para1{
     position: absolute;
     width: 170px;
     height: 170px;
-    background-color: #e302c5;
+    background-color: #ec48db;
     clip-path: polygon(50% 0%, 50% 50%, 100% 43%, 94% 78%, 50% 50%, 32% 100%, 6% 78%, 50% 50%, 17% 12%);
     top:15px;
     left:15px;
@@ -49,26 +120,28 @@ body{
     z-index: 1;
     display:flex;
     align-items: center;
-    justify-content: center;
-    filter:drop-shadow(0 0 20px #e302c5) drop-shadow(0 0 60px #e302c5);
+    justify-content: center; 
 }
+
 .mrond{
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: #e302c5;
+    background-color: #ec48db;
     bottom: 85px;
     left:85px;
     border-radius: 50%;
+   
 }
 .loading{
     margin-top: 10px;
-    color:#e302c5;
+    color:#ec48db;
     font-family: poppins;
     font-weight: 600 ;
+    filter: drop-shadow(0 0 20px #ec48db) drop-shadow(0 0 60px #ec48db);
 }
 .logo{
-    color:#e302c5;
+    background-image:url("logo-popcode.eps");
     display: none;
 }
 @keyframes spin {
@@ -77,3 +150,14 @@ body{
     }
 
 
+    .image-clignote  {
+        animation-duration: .8s;
+        animation-name: clignoter;
+        animation-iteration-count: infinite;
+        transition: none;
+     }
+     @keyframes clignoter {
+       0%   { opacity:1; }
+       40%   {opacity:0; }
+       100% { opacity:1; }
+     }
