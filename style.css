@@ -172,8 +172,8 @@ footer > div{
     max-height: 100vh ;
 }
 .box2{
+    height: 100vh;
     display:flex;
-    margin-top: 30px;
     align-items: center;
     flex-direction: column;
 }
@@ -186,12 +186,11 @@ footer > div{
     color: #0AEFF7;
     font-family: 'gotham';
     font-size: 150px;
-    margin-top:10;
-    margin-bottom: 0;
     letter-spacing: -11px;
 }
 
 .box2 > p{
+    margin-bottom: 10px;
     color:#ffff;
     font-family:'gotham';
     font-size: 15px;
@@ -200,11 +199,11 @@ footer > div{
     text-align: center;
 }
 .box2 > a {
-    margin-top: 50px;
     font-family: 'gotham';
     color:#FFAAFF;
     text-decoration-line:none;
-}
+    margin-top: 40px;
+} 
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
