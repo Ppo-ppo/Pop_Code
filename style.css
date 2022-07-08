@@ -234,18 +234,29 @@ footer>div {
     animation-iteration-count: infinite;
     transition: none;
 }
-
-.chambre {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
 .pagejeu {
     width: 100vw;
     height: 100vh;
-    display: flex;
+    /* display: flex; */
+}
+.pagejeu .zoom{
+    background-color: #DDD; height: 100%; margin: auto; overflow: hidden; width: 100%; }
+
+.media{ bottom: 0; display: block; left: 0; margin: auto; width: 100%; position: absolute; right: 0; top: 0;
+
+-moz-transform-style: preserve-3d;
+
+-ms-transform-style: preserve-3d;
+
+-o-transform-style: preserve-3d;
+
+-webkit-transform-style: preserve-3d;
+
+
+}
+.chambre {
+    position: absolute;
+    z-index: 1;
 }
 
 .logo2 {
@@ -321,7 +332,7 @@ footer>div {
     left: 0;
 }
 
-.zoom {
+.zoom2 {
     position: relative;
     color: #0AEFF7;
     transform: rotate(-90deg);
