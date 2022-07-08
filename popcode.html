@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
 
     <title>recherche loader</title>
 </head>
+
 <body>
     <div id="bobox1">
         <div class="boite">
@@ -36,20 +38,52 @@
         </div>
     </div>
     <div class="acceuil">
-            <div class="box2">
-                <img class="logo"src="img/logo-popcode2.svg" alt="logo popcode">
-                <p class="chiffre">30</p>
-                <p class="regle">RÉFÉRENCES DE<br>LANGAGES DE PROGRAMMATION<br>À RETROUVER</p>
-                <a href="#">CLIQUER POUR COMMENCER</a>
-            </div>
+        <div class="box2">
+            <img class="logo" src="img/logo-popcode2.svg" alt="logo popcode">
+            <p class="chiffre">27</p>
+            <p class="regle">RÉFÉRENCES DE<br>LANGAGES DE PROGRAMMATION<br>À RETROUVER</p>
+            <p id="commencon">CLIQUER POUR COMMENCER</p>
+        </div>
     </div>
-
+    <div class="pagejeu none">
+        <img class="zoom2 chambre" src="/img/chambe.jpg" alt="">
+        <div class="container8">
+            <div class="score">
+                <p class="skore">SCORE</p>
+                <div class="skross">
+                    <p class="conteur"><span id="score">0</span> / 27</p>
+                    <p class="cross">X X X</p>
+                </div>
+            </div>
+        </div>
+        <div class="container9">
+            <p class="zoom">ZOOM</p>
+            <p class="plus">+</p>
+            <div class="barre"></div>
+            <p class="moin">-</p>
+            <div class="petiteboite">
+                <img class="loupe" src="img/loupe.svg" alt="loupe">
+                <p>LANGAGES TROUVÉS</p>
+            </div>
+        </div>
+        <img class="popcode" src="img/logo-popcode.svg" alt="logo">
+        <div class="modal none">
+            <div class="modal_content">
+                <input type="text" class="text" autofocus>
+                <p>TAPE UN NOM DE LANGAGE DE PROGRAMMATION</p>
+            </div>
+        </div>
+    </div>
+    </div>
     <footer>
         <div class="capsule">
             <a class="mlpc" href="#">Mentions légales</a>
-            <a class="mlpc"href="#">Politique de confidentialité</a>
+            <a class="mlpc" href="#">Politique de confidentialité</a>
         </div>
     </footer>
+    <p class="responsive">mieu vaut jouer sur ton ordinateur </p>
     <script src="js.js"></script>
+    <script src="wheelzoom.js"></script>
 </body>
+
 </html>
