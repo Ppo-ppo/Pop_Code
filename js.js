@@ -1,8 +1,14 @@
   let plusla =document.querySelector('#bobox1')
   let loader=document.querySelector('.box1');
   let acceuil=document.querySelector('.acceuil');
-  var modal=document.querySelector('.modal')
+  var modal=document.querySelector('.modal');
   var score=0;
+  let reponce=['JavaScript','Html','css','Sql','Python','Java','Bash','PowerShell','C#','Php','C++','TypeScript','C','Ruby','Go','Assembly','Swift','Kotlin','R','Vba','Objective-C','Scala','Rust','Dart','Elixir','Clojure','WebAssembly'];
+  var pagejeu= document.querySelector('.pagejeu');
+  var afterGame= document.querySelector('.afterGame');
+  var result=document.querySelector('.result');
+  var relaunch = document.querySelector('.relaunch')
+  var input='';
   
   zoom({
     active: "zoom-active", // Class added to container when it is zoomed
@@ -21,11 +27,11 @@
  // Callback, gets triggered whenever active class is added/removed from container, value of zoomed is true or false
   }));
 
-              setTimeout(remplacertruc, 00);
-              function remplacertruc(){
-                  plusla.classList.add('box1')
-                  acceuil.classList.remove('acceuil')
-              } 
+setTimeout(remplacertruc, 00);
+    function remplacertruc(){
+        plusla.classList.add('box1')
+        acceuil.classList.remove('acceuil')
+    } 
          // ca c'est pour mes trois point du loader
 let toto ='...'
 function typingText(text, speed) {
@@ -41,18 +47,10 @@ function typingText(text, speed) {
     }, speed);
 }
 typingText(toto,800);
-
-
 document.querySelector('#commencon').addEventListener('click',function(){
     acceuil.classList.add('none')
     pagejeu.classList.remove('none')
 })
-var pagejeu= document.querySelector('.pagejeu');
-
-let reponce=['JavaScript','Html','css','Sql','Python','Java','Bash','PowerShell','C#','Php','C++','TypeScript','C','Ruby','Go','Assembly','Swift','Kotlin','R','Vba','Objective-C','Scala','Rust','Dart','Elixir','Clojure','WebAssembly'];
-
-
-var input='';
 window.addEventListener('keydown', function(event){
     event.stopPropagation()
     modal.classList.remove('none')
@@ -65,6 +63,11 @@ window.addEventListener('keydown', function(event){
         for (let i = 0; i < reponce.length; i++) {  
             if (input.toLowerCase() === reponce[i].toLowerCase()) {
                 score++ 
+                if(score===reponce.length){
+                    result.textContent='You Win!';
+                    pagejeu.classList.add('none')
+                    afterGame.classList.remove('none')
+                }
                 document.querySelector('#score').textContent = score
             } 
         }

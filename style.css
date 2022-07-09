@@ -420,7 +420,33 @@ footer>div {
     outline: none;
 
 }
-
+.afterGame{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    color: white;
+    text-align: center;
+    font-family: 'gotham';
+    margin: 0;
+}
+.relaunch{
+    font-family: 'gotham';
+    font-size: 20px;
+    color:#FFAAFF;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20vh;
+    cursor: pointer;
+}
+.lightBlue{
+    color:#0AEFF7;
+}
 @keyframes spin {
     0% {
         transform: rotate(0deg);
