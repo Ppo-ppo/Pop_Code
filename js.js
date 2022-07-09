@@ -7,8 +7,12 @@
   var pagejeu= document.querySelector('.pagejeu');
   var afterGame= document.querySelector('.afterGame');
   var result=document.querySelector('.result');
-  var relaunch = document.querySelector('.relaunch')
+  var relaunch = document.querySelector('.relaunch');
   var input='';
+  var countFound=document.querySelector('#score');
+  var error=0;
+  var checkCountRotate=0;
+  let errorClass=['error1','error2','error3'];
   
   zoom({
     active: "zoom-active", // Class added to container when it is zoomed
@@ -52,6 +56,7 @@ document.querySelector('#commencon').addEventListener('click',function(){
     pagejeu.classList.remove('none')
 })
 window.addEventListener('keydown', function(event){
+    checkCountRotate = 0;
     event.stopPropagation()
     modal.classList.remove('none')
     document.querySelector(".text").focus();
@@ -65,18 +70,52 @@ window.addEventListener('keydown', function(event){
                 score++ 
                 if(score===reponce.length){
                     result.textContent='You Win!';
-                    pagejeu.classList.add('none')
-                    afterGame.classList.remove('none')
+                    pagejeu.classList.add('none');
+                    afterGame.classList.remove('none');
                 }
-                document.querySelector('#score').textContent = score
+                countFound.textContent = score
+                return;
             } 
+            checkCountRotate++;
+        }
+        if (checkCountRotate===reponce.length) {
+            switch (error) {
+                case 0:
+                    document.querySelector('.text').value = "";
+                    error++;
+                    document.querySelector('.error1').classList.add('lightBlue');
+                    break;
+                case 1:
+                    document.querySelector('.text').value="";
+                    error++;
+                    document.querySelector('.error2').classList.add('lightBlue');
+                    break;
+                case 2:
+                    document.querySelector('.text').value="";
+                    error++;
+                    document.querySelector('.error3').classList.add('lightBlue');
+                    result.textContent='You Lose!';
+                    pagejeu.classList.add('none');
+                    afterGame.classList.remove('none');
+                    break;
+            }
         }
     }
 })
-  
+  relaunch.addEventListener('click', function(){
+      score =0;
+      countFound.textContent = score;
+      afterGame.classList.add('none');
+      acceuil.classList.remove('none');
+      error=0;
+      for (let index = 0; index < errorClass.length; index++) {
+            document.querySelector('.'+errorClass[index]).classList.remove('lightBlue');  
+      }
+  })
 document.querySelector('.modal_content').addEventListener('click',function(event){
     event.stopPropagation()
     document.querySelector('.modal').classList.toggle('none')
 })
+
 
 
