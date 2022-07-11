@@ -13,6 +13,10 @@
   var error=0;
   var checkCountRotate=0;
   let errorClass=['error1','error2','error3'];
+  var langageTrouves = document.querySelector('.petiteboite');
+  var modal2=document.querySelector('.modal2');
+  var modalContent2= document.querySelector('.modalContent2');
+  var resultatTrouves=[];
   
   zoom({
     active: "zoom-active", // Class added to container when it is zoomed
@@ -56,11 +60,14 @@ document.querySelector('#commencon').addEventListener('click',function(){
     pagejeu.classList.remove('none')
 })
 window.addEventListener('keydown', function(event){
+if(pagejeu.classList.contains('none')){
+    return;
+}
     checkCountRotate = 0;
     event.stopPropagation()
     modal.classList.remove('none')
     document.querySelector(".text").focus();
-
+if (input.value!==""){
     if (event.code === 'Enter') {
         input=document.querySelector('.text').value;
         document.querySelector('.modal').classList.toggle('none')
@@ -74,6 +81,9 @@ window.addEventListener('keydown', function(event){
                     afterGame.classList.remove('none');
                 }
                 countFound.textContent = score
+                    console.log(i)
+                    resultatTrouves.push(reponce[i])
+                    modalContent2.innerHTML+= '<p>'+reponce[i]+'</p>'
                 return;
             } 
             checkCountRotate++;
@@ -100,7 +110,8 @@ window.addEventListener('keydown', function(event){
                     break;
             }
         }
-    }
+        
+    }}
 })
   relaunch.addEventListener('click', function(){
       score =0;
@@ -116,6 +127,16 @@ document.querySelector('.modal_content').addEventListener('click',function(event
     event.stopPropagation()
     document.querySelector('.modal').classList.toggle('none')
 })
+langageTrouves.addEventListener('click',function(){
+    modal2.classList.toggle('none');
+})
+modal2.addEventListener('click',function(){
+    modal2.classList.toggle('none');
+})
+
+
+
+
 
 
 
