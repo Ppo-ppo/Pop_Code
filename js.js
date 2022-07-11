@@ -17,6 +17,7 @@
   var modal2=document.querySelector('.modal2');
   var modalContent2= document.querySelector('.modalContent2');
   var resultatTrouves=[];
+  var modal3=document.querySelector('.modal3');
   
   zoom({
     active: "zoom-active", // Class added to container when it is zoomed
@@ -64,8 +65,8 @@ function check() {
         if (input.toLowerCase()=== resultatTrouves[index].toLowerCase()) {
             return true
         }
-        return false
-    }  
+    } 
+    return false 
 }
 window.addEventListener('keydown', function(event){
 if(pagejeu.classList.contains('none')){
@@ -75,14 +76,14 @@ if(pagejeu.classList.contains('none')){
     event.stopPropagation()
     modal.classList.remove('none')
     document.querySelector(".text").focus();
-if (input.value!==""){
+if (document.querySelector('.text').value !== ''){
     if (event.code === 'Enter') {
         input=document.querySelector('.text').value;
         document.querySelector('.modal').classList.toggle('none')
         document.querySelector('.text').value = ""
-        console.log(resultatTrouves)
         for (let i = 0; i < reponce.length; i++) {
            if (check() === true) {
+               modal3.classList.toggle('none')
                break
            }
             if (input.toLowerCase() === reponce[i].toLowerCase()) {
@@ -93,7 +94,6 @@ if (input.value!==""){
                     afterGame.classList.remove('none');
                 }
                 countFound.textContent = score
-                    console.log(i)
                     resultatTrouves.push(reponce[i])
                     modalContent2.innerHTML+= '<p>'+reponce[i]+'</p>'
                 return;
@@ -146,7 +146,9 @@ modal2.addEventListener('click',function(){
     modal2.classList.toggle('none');
 })
 
-
+modal3.addEventListener('click',function(){
+    modal3.classList.toggle('none');
+})
 
 
 
