@@ -468,6 +468,7 @@ footer>div {
     height: 20px;
     cursor: pointer;
     z-index: 10000;
+    background-color: #0AEFF7;
 }
 .lightBlue{
     color:#0AEFF7;

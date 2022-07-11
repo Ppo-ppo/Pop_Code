@@ -36,7 +36,7 @@
  // Callback, gets triggered whenever active class is added/removed from container, value of zoomed is true or false
   }));
 
-setTimeout(remplacertruc, 00);
+setTimeout(remplacertruc, 4000);
     function remplacertruc(){
         plusla.classList.add('box1')
         acceuil.classList.remove('acceuil')
