@@ -59,6 +59,14 @@ document.querySelector('#commencon').addEventListener('click',function(){
     acceuil.classList.add('none')
     pagejeu.classList.remove('none')
 })
+function check() {
+    for (let index = 0; index < resultatTrouves.length; index++) {
+        if (input.toLowerCase()=== resultatTrouves[index].toLowerCase()) {
+            return true
+        }
+        return false
+    }  
+}
 window.addEventListener('keydown', function(event){
 if(pagejeu.classList.contains('none')){
     return;
@@ -72,7 +80,11 @@ if (input.value!==""){
         input=document.querySelector('.text').value;
         document.querySelector('.modal').classList.toggle('none')
         document.querySelector('.text').value = ""
-        for (let i = 0; i < reponce.length; i++) {  
+        console.log(resultatTrouves)
+        for (let i = 0; i < reponce.length; i++) {
+           if (check() === true) {
+               break
+           }
             if (input.toLowerCase() === reponce[i].toLowerCase()) {
                 score++ 
                 if(score===reponce.length){
