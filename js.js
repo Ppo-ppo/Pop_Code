@@ -27,7 +27,7 @@
   }, {
     scaleDefault: 2, // Used on doubleclick, doubletap and resize
     scaleDifference: 0.5, // Used on wheel zoom
-    scaleMax: 4, // Maximum zoom
+    scaleMax: 10, // Maximum zoom
     scaleMin: 1, // Minimum zoom
     scrollDisable: true, // Disable page scrolling when zooming an image
     transitionDuration: 200, // This should correspond with zoom-transition transition duration
@@ -148,6 +148,9 @@ modal2.addEventListener('click',function(){
 
 modal3.addEventListener('click',function(){
     modal3.classList.toggle('none');
+})
+pagejeu.addEventListener('wheel',function(){
+    document.querySelector('.fill').style.height= 100 - document.querySelector('.media').dataset.scale*10+'%';
 })
 
 
