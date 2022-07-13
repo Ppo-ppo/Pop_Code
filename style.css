@@ -166,24 +166,23 @@ footer {
 }
 
 footer>div {
-    display: flex;
-    justify-content: space-around;
     padding: 25px;
     gap: 15px;
+
 }
 
 .capsule>a {
     font-family: "gotham";
     color: #ffff;
-    font-weight: 11px;
-    font-size: medium;
+    font-weight: 500;
+    font-size: 12px;
     text-decoration-line: none;
     border-bottom: 2px solid white;
-    height: 5px;
+    height: 20px;
+    padding-bottom: 5px;
 }
-
 .capsule>a:hover {
-    border-bottom: #D9D9D9 solid 2px;
+    color: #D9D9D9;
 }
 
 .acceuil {
