@@ -514,6 +514,27 @@ footer>div {
     font-family: 'montserrat';
     gap: 30px;
 }
+.modal4{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.655);
+    transition: .3s;
+    z-index: 1000000;
+    top: 0; 
+}
+.modalContent4{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'montserrat';
+    gap: 30px; 
+}
 @keyframes spin {
     0% {
         transform: rotate(0deg);
