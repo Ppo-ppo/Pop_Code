@@ -528,12 +528,29 @@ footer>div {
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-family: 'montserrat';
     gap: 30px; 
+}
+.modalContent4>h2{
+    position: absolute;
+    top:10px;
+    font-size: 80px;
+    font-weight: 500;
+    left: 20%;
+}
+.modalContent4>img{
+    position: absolute;
+    left:20%;
+    height: 48vh;
+    width: 25vw;
+}
+.modalContent4>p{
+    position: absolute;
+    left:50%;
+    top:25%;
 }
 @keyframes spin {
     0% {

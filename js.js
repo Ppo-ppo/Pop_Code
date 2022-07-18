@@ -18,7 +18,7 @@
   var modalContent2= document.querySelector('.modalContent2');
   var resultatTrouves=[];
   var modal3=document.querySelector('.modal3');
-
+  var modal4=document.querySelector('.modal4');
   var tabdescription=[
     {name:"Html",description:"Le HyperText Markup Language, généralement abrégé HTML ou, dans sa dernière version, HTML5, est le langage de balisage conçu pour représenter les pages web.Ce langage permet :d’écrire de l’hypertexte, d’où son nom, structurer sémantiquement la page, mettre en forme le contenu, créer des formulaires de saisie,d’inclure des ressources multimédias dont des images, des vidéos, et des programmes informatiques, créer des documents interopérables avec des équipements très variés de manière conforme aux exigences de l’accessibilité du web. Il est souvent utilisé conjointement avec le langage de programmation JavaScript et des feuilles de style en cascade (CSS). HTML est inspiré du Standard Generalized Markup Language (SGML). Il s'agit d'un format ouvert.",src:"logos/html.svg"},
     {name:"Css",description:"Les feuilles de style en cascade[1], généralement appelées CSS de l'anglais Cascading Style Sheets, forment un langage informatique qui décrit la présentation des documents HTML et XML. Les standards définissant CSS sont publiés par le World Wide Web Consortium (W3C). Introduit au milieu des années 1990, CSS devient couramment utilisé dans la conception de sites web et bien pris en charge par les navigateurs web dans les années 2000.",src:"logos/css.svg"},
@@ -116,7 +116,7 @@ if (document.querySelector('.text').value !== ''){
                break
            }
             if (input.toLowerCase() === reponce[i].toLowerCase()) {
-
+                document.querySelector('.modal4').classList.toggle('none'),
                 score++ 
                 if(score===reponce.length){
                     result.textContent='You Win!';
@@ -179,11 +179,9 @@ modal2.addEventListener('click',function(){
 modal3.addEventListener('click',function(){
     modal3.classList.toggle('none');
 })
+modal4.addEventListener('click',function(){
+    modal4.classList.toggle('none');
+})
 pagejeu.addEventListener('wheel',function(){
     document.querySelector('.fill').style.height= 100 - document.querySelector('.media').dataset.scale*10+'%';
 })
-
-
-
-
-
