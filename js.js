@@ -3,7 +3,7 @@
   let acceuil=document.querySelector('.acceuil');
   var modal=document.querySelector('.modal');
   var score=0;
-  let reponce=['JavaScript','Html','css','Sql','Python','Java','Bash','PowerShell','C#','Php','C++','TypeScript','C','Ruby','Go','Assembly','Swift','Kotlin','R','Vba','Objective-C','Scala','Rust','Dart','Elixir','Clojure','WebAssembly'];
+  let reponce=['Html','css','Javascript','Sql','Python','Java','Bash','PowerShell','C#','Php','C++','TypeScript','C','Ruby','Go','Assembly','Swift','Kotlin','R','Vba','Objective-C','Scala','Rust','Dart','Elixir','Clojure','WebAssembly'];
   var pagejeu= document.querySelector('.pagejeu');
   var afterGame= document.querySelector('.afterGame');
   var result=document.querySelector('.result');
@@ -19,7 +19,7 @@
   var resultatTrouves=[];
   var modal3=document.querySelector('.modal3');
   var modal4=document.querySelector('.modal4');
-  var tabdescription=[
+  const tabdescription=[
     {name:"Html",description:"Le HyperText Markup Language, généralement abrégé HTML ou, dans sa dernière version, HTML5, est le langage de balisage conçu pour représenter les pages web.Ce langage permet :d’écrire de l’hypertexte, d’où son nom, structurer sémantiquement la page, mettre en forme le contenu, créer des formulaires de saisie,d’inclure des ressources multimédias dont des images, des vidéos, et des programmes informatiques, créer des documents interopérables avec des équipements très variés de manière conforme aux exigences de l’accessibilité du web. Il est souvent utilisé conjointement avec le langage de programmation JavaScript et des feuilles de style en cascade (CSS). HTML est inspiré du Standard Generalized Markup Language (SGML). Il s'agit d'un format ouvert.",src:"logos/html.svg"},
     {name:"Css",description:"Les feuilles de style en cascade[1], généralement appelées CSS de l'anglais Cascading Style Sheets, forment un langage informatique qui décrit la présentation des documents HTML et XML. Les standards définissant CSS sont publiés par le World Wide Web Consortium (W3C). Introduit au milieu des années 1990, CSS devient couramment utilisé dans la conception de sites web et bien pris en charge par les navigateurs web dans les années 2000.",src:"logos/css.svg"},
     {name:"Javascript",description:"JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au coeur des langages utilisés par les développeurs web. Une grande majorité des sites web l'utilisent et la majorité des navigateurs web disposent d'un moteur JavaScript[5] pour l'interpréter.JavaScript est aussi employé pour les serveurs Web avec l'utilisation (par exemple) de Node.js[7] ou de Deno[8].JavaScript a été créé en 1995 par Brendan Eich et intégré au navigateur web Netscape Navigator 2.0. L'implémentation concurrente de JavaScript par Microsoft dans Internet Explorer jusqu'à sa version 9 se nommait JScript, tandis que celle d'Adobe Systems se nommait ActionScript. JavaScript a été standardisé sous le nom d'ECMAScript en juin 1997 par Ecma International dans le standard ECMA-262. La version en vigueur de ce standard depuis juin 2022 est la 13e édition.C 'est un langage orienté objet à prototype : les bases du langage et ses principales interfaces sont fournies par des objets. Cependant, à la différence d'un langage orienté objets,les objets de base ne sont pas des instances de classes.En outre,les fonctions sont des objets de première classe.Le langage supporte le paradigme objet, impératif et fonctionnel.JavaScript est le langage possédant le plus large écosystème grâce à son gestionnaire de dépendances npm, avec environ 500 000 paquets en août 2017 ",src:"logos/js.svg"},
@@ -116,6 +116,9 @@ if (document.querySelector('.text').value !== ''){
                break
            }
             if (input.toLowerCase() === reponce[i].toLowerCase()) {
+                document.querySelector('.modalContent4>h2').textContent=tabdescription[i].name;
+                document.querySelector('.modalContent4>p').textContent=tabdescription[i].description;
+                document.querySelector('.modalContent4>img').src=tabdescription[i].src;
                 document.querySelector('.modal4').classList.toggle('none'),
                 score++ 
                 if(score===reponce.length){
