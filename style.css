@@ -166,7 +166,6 @@ footer {
 
 footer>div {
     padding: 25px;
-    gap: 15px;
 
 }
 
@@ -176,7 +175,7 @@ footer>div {
     font-weight: 500;
     font-size: 12px;
     text-decoration-line: none;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     height: 20px;
     padding-bottom: 5px;
 }
@@ -467,7 +466,10 @@ footer>div {
     height: 20px;
     cursor: pointer;
     z-index: 10000;
-    background-color: #0AEFF7;
+    animation-duration: 2s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
 }
 .lightBlue{
     color:#0AEFF7;
@@ -572,6 +574,46 @@ footer>div {
     bottom:40%;
     right:250px;
     font-family: 'montserrat';
+}
+.modal5{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.655);
+    transition: .3s;
+    z-index: 1000000;
+    top: 0; 
+}
+.modalContent5{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'montserrat';
+    gap: 30px; 
+}
+.modal6{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.655);
+    transition: .3s;
+    z-index: 1000000;
+    top: 0; 
+}
+.modalContent6{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'montserrat';
+    gap: 30px; 
 }
 @keyframes spin {
     0% {
