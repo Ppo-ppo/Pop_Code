@@ -104,6 +104,12 @@ function check() {
     return false 
 }
 window.addEventListener('keydown', function(event){
+if (modal3.classList.contains('none')=== false) {
+    return;
+}
+if(modal4.classList.contains('none')=== false){
+    return;
+}
 if(pagejeu.classList.contains('none')){
     return;
 }
@@ -116,6 +122,7 @@ if (document.querySelector('.text').value !== ''){
         input=document.querySelector('.text').value;
         document.querySelector('.modal').classList.toggle('none')
         document.querySelector('.text').value = ""
+        
         for (let i = 0; i < reponce.length; i++) {
            if (check() === true) {
                modal3.classList.toggle('none')
