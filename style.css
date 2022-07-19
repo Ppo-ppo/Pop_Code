@@ -486,7 +486,6 @@ footer>div {
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
@@ -536,12 +535,20 @@ footer>div {
 }
 .modalContent4>h2{
     position: absolute;
-    top:10px;
+    top:50px;
     font-size: 80px;
     font-weight: 500;
-    left: 20%;
+    left: 25%;
+    margin: 0;
+    font-family: 'montserrat';
 }
-.modalContent4>img{
+.croix{
+    position: absolute;
+    right: 270px;
+    top:100px;
+    cursor: pointer;
+}
+.modalContent4>.lg{
     position: absolute;
     left:20%;
     height: 48vh;
@@ -550,7 +557,21 @@ footer>div {
 .modalContent4>p{
     position: absolute;
     left:50%;
-    top:25%;
+    font-size:13px;
+    width: 450px;
+    height: 300px;
+    margin:0;
+}
+.coche{
+    position: absolute;
+    bottom:40%;
+    right:40%;
+}
+.cocher{
+    position: absolute;
+    bottom:40%;
+    right:250px;
+    font-family: 'montserrat';
 }
 @keyframes spin {
     0% {
