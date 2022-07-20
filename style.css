@@ -676,17 +676,17 @@ footer>div {
         display: none !important;
         overflow: hidden !important;
     }
+    .bobox1{
+        display: none!important;
+    }
     .responsive{
         display: block !important;
         max-height: 100vh;
         margin: 0;
         padding: 0;
-        background-image: url("img/mur.png");
-        background-size: cover norepeat !important;
         position: relative;
-        z-index:10000000;
         top:350px;
-        left:15px;
+        left:15%;
         overflow: hidden !important;
     }
 }

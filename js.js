@@ -1,5 +1,6 @@
   let plusla =document.querySelector('#bobox1')
   let loader=document.querySelector('.box1');
+  let orbe=document.querySelector('.boite')
   let acceuil=document.querySelector('.acceuil');
   var modal=document.querySelector('.modal');
   var score=0;
@@ -225,6 +226,7 @@ new ResizeObserver((entries) => {
       console.log("entries[0]");
       responsivePop.classList.add("none");
       acceuil.classList.add('none')
+      boite.classList.Add('none')
     } else {
       responsivePop.classList.remove("none");
       acceuil.classList.remove("none")
