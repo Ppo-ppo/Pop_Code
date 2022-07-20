@@ -219,12 +219,7 @@ mention.addEventListener('click',function(){
 modal5.addEventListener('click',function(){
     modal5.classList.toggle('none');
 })
-politique.addEventListener('click',function(){
-    modal6.classList.toggle('none');
-})
-modal6.addEventListener('click', function(){
-    modal6.classList.toggle('none');
-})
+
 new ResizeObserver((entries) => {
     if (entries[0].contentRect.width <= 900) {
       console.log("entries[0]");
