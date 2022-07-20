@@ -664,4 +664,29 @@ footer>div {
 
 .responsive {
     display: none;
+    font-family: "montserrat";
+    color: white;
+}
+@media screen and (hover: none) and (max-width:1024px){
+    .container{
+        display: none !important;
+        overflow: hidden !important;
+    }
+    .acceuil{
+        display: none !important;
+        overflow: hidden !important;
+    }
+    .responsive{
+        display: block !important;
+        max-height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-image: url("img/mur.png");
+        background-size: cover norepeat !important;
+        position: relative;
+        z-index:10000000;
+        top:350px;
+        left:15px;
+        overflow: hidden !important;
+    }
 }
