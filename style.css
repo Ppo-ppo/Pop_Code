@@ -180,7 +180,8 @@ footer>div {
     padding-bottom: 5px;
 }
 .capsule>a:hover {
-    color: #D9D9D9;
+    color: #FFAAFF;
+    border-color: #FFAAFF;
 }
 
 .acceuil {
@@ -232,6 +233,9 @@ footer>div {
     animation-name: clignoter;
     animation-iteration-count: infinite;
     transition: none;
+}
+#commencon:hover{
+    text-shadow: #FFAAFF 2px 2px 5px;
 }
 .pagejeu {
     width: 100vw;
@@ -387,7 +391,10 @@ footer>div {
     position: absolute;
     top:3px;
 }
-
+.petiteboite>p:hover{
+    color: #FFAAFF;
+    text-shadow: #FFAAFF 2px 2px 3px;
+}
 .modal {
     position: absolute;
     width: 100%;
