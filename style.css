@@ -586,6 +586,10 @@ footer>div {
     font-family: 'montserrat';
     gap: 30px; 
 }
+.modalContent5>p>a{
+    text-decoration: none;
+    color: #FFAAFF;
+}
 .modal6{
     position: absolute;
     width: 100%;

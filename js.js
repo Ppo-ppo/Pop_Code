@@ -106,10 +106,14 @@ function check() {
     return false 
 }
 window.addEventListener('keydown', function(event){
+
 if (modal3.classList.contains('none')=== false) {
     return;
 }
 if(modal4.classList.contains('none')=== false){
+    return;
+}
+if (modal2.classList.contains('none')=== false){
     return;
 }
 if(pagejeu.classList.contains('none')){
