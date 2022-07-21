@@ -166,6 +166,7 @@ footer>div {
 .capsule>a:hover {
     color: #FFAAFF;
     border-color: #FFAAFF;
+    text-shadow: #FFAAFF 2px 2px 5px;
 }
 
 .acceuil {
@@ -356,6 +357,11 @@ footer>div {
     z-index: 10;
     cursor: pointer;
 }
+.petiteboite:hover{
+    box-shadow:#FFAAFF 2px 2px 5px; 
+    text-shadow: #FFAAFF 2px 2px 3px;
+    border-color: #FFAAFF;
+}
 
 .loupe {
     width: 14px;
@@ -375,10 +381,6 @@ footer>div {
     position: absolute;
     top:3px;
 }
-.petiteboite>p:hover{
-    color: #FFAAFF;
-    text-shadow: #FFAAFF 2px 2px 3px;
-}
 .modal {
     position: absolute;
     width: 100%;
@@ -389,7 +391,6 @@ footer>div {
     z-index: 1000000;
     top: 0;
 }
-
 .modal_content {
     width: 100vw;
     height: 100vh;
@@ -401,7 +402,6 @@ footer>div {
     font-family: 'montserrat';
     gap: 30px;
 }
-
 .modal_content>input {
     background: transparent;
     border: none;
@@ -411,10 +411,8 @@ footer>div {
     color: white;
     text-align: center;
 }
-
 .modal_content>input:focus {
     outline: none;
-
 }
 .rightTop{
     position: absolute;
@@ -461,6 +459,9 @@ footer>div {
     animation-name: clignoter;
     animation-iteration-count: infinite;
     transition: none;
+}
+.relaunch:hover{
+    text-shadow: #FFAAFF 2px 2px 5px;  
 }
 .lightBlue{
     color:#0AEFF7;
@@ -619,15 +620,12 @@ footer>div {
         transform: rotate(360deg);
     }
 }
-
-
 .image-clignote {
     animation-duration: .8s;
     animation-name: clignoter;
     animation-iteration-count: infinite;
     transition: none;
 }
-
 @keyframes clignoter {
     0% {
         opacity: 1;
@@ -641,7 +639,6 @@ footer>div {
         opacity: 1;
     }
 }
-
 @font-face {
     font-family: "montserrat";
     src: url("font/Montserrat-VariableFont_wght.ttf");
@@ -656,7 +653,6 @@ footer>div {
 .box1 {
     display: none;
 }
-
 .responsive {
     display: none;
     font-family: "montserrat";
