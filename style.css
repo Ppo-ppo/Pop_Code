@@ -262,7 +262,7 @@ footer>div {
     font-family: 'montserrat';
     position: relative;
     z-index: 1000;
-    top:15px;
+    top:18px;
 }
 
 .skross {
@@ -273,9 +273,9 @@ footer>div {
 
 .conteur {
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     width: 71px;
-    margin:0;
+    margin:3px 0 0 0;
     padding: 0;
     font-family: 'montserrat';
     position: relative;
@@ -285,7 +285,7 @@ footer>div {
     color: rgba(255, 255, 255, 0.301);
     width: 72px;
     height: 17px;
-    font-size: 18px;
+    font-size: 15px;
     top:0;
     padding: 0;
     margin:0;
@@ -371,7 +371,7 @@ footer>div {
     letter-spacing: 2px;
     font-family: 'montserrat';
     margin-bottom: 2PX;
-    margin-left: 5px;
+    margin-left: 15px;
     position: absolute;
     top:3px;
 }
