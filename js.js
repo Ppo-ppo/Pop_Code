@@ -116,6 +116,9 @@ if(modal4.classList.contains('none')=== false){
 if (modal2.classList.contains('none')=== false){
     return;
 }
+if (modal5.classList.contains('none')=== false){
+    return;
+}
 if(pagejeu.classList.contains('none')){
     return;
 }
